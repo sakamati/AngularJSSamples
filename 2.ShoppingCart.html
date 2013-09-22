@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app>
+<head>
+    <title>AngularJS - Shopping Cart</title>
+    <script src="scripts/vendor/angular.min.js"></script>
+    <script src="scripts/controllers/ShoppingCartCtrl.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/angularSamples.css" rel="stylesheet" />
+</head>
+<body ng-controller="ShoppingCartCtrl">
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <strong class="brand">Introduction to AngularJS</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container mainContent">
+        <div class="page-header">
+            <h1>2. Your Shopping Cart</h1>
+        </div>
+        <div class="well">
+            <table class="table-hover table-condensed">
+                <tbody>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total Price</th>
+                        <th></th>
+                    </tr>
+                    <tr ng-repeat="item in items">
+                        <td><span>{{item.title}}</span></td>
+                        <td>
+                            <input type="text" ng-model="item.quantity" class="input-small" /></td>
+                        <td><span>{{item.price}}</span></td>
+                        <td><strong>{{item.price * item.quantity}}</strong></td>
+                        <td>
+                            <button ng-click="remove($index)" class="btn-danger btn">Remove</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">
+                            <hr />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3">Total Amount : 
+                        </td>
+                        <td>
+                            <strong>{{calculateBill()}}</strong>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+

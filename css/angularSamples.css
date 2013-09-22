@@ -1,0 +1,27 @@
+﻿.mainContent {
+    padding-top: 45px;
+}
+
+.scopeSample .ng-scope {
+    border: 1px dashed red;
+}
+
+div.rating {
+    cursor: pointer;
+    display: inline-block;
+}
+
+    div.rating span {
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+    }
+
+        div.rating span.on {
+            background: url('../img/star-on.png') !important;
+        }
+
+        div.rating span.off {
+            background: url('../img/star-off.png');
+        }

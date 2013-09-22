@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ratingModule">
+<head>
+    <title>AngularJS - Rating</title>
+    <script src="scripts/vendor/jquery-2.0.3.min.js"></script>
+    <script src="scripts/vendor/angular.min.js"></script>
+    <script src="scripts/directives/RatingDirective.js"></script>
+    <script src="scripts/controllers/RatingCtrl.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/angularSamples.css" rel="stylesheet" />
+</head>
+<body ng-controller="ratingCtrl">
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <strong class="brand">Introduction to AngularJS</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container mainContent">
+        <div class="page-header">
+            <h1>5. Rating Control Demo</h1>
+        </div>
+        <div class="well">
+            <div my-rating rating="ratingValue" max="5"></div>
+            <input type="text" ng-model="ratingValue" />
+            <br />
+            <div my-rating rating="ratingValue1" max="10"></div>
+            <input type="text" ng-model="ratingValue1" />
+            <br />
+            <div my-rating rating="ratingValue2" max="15"></div>
+            <input type="text" ng-model="ratingValue2" />
+            <br />
+            <div my-rating rating="ratingValue3" max="20"></div>
+            <input type="text" ng-model="ratingValue3" />
+        </div>
+    </div>
+</body>
+</html>
+
+

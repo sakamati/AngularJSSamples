@@ -1,0 +1,12 @@
+﻿<table class="table-hover table-condensed">
+    <tr>
+        <th>Sender</th>
+        <th>Subject</th>
+        <th>Date</th>
+    </tr>
+    <tr ng-repeat="msg in messages">
+        <td>{{msg.sender}}</td>
+        <td><a href="#/view/{{msg.id}}">{{msg.subject}}</a></td>
+        <td>{{msg.date}}</td>
+    </tr>
+</table>
